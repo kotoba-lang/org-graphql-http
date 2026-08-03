@@ -1,9 +1,9 @@
-(ns kotobase.protocols.json
+(ns kotobase.protocols.graphql.json
   "Minimal, dependency-free JSON encode/parse in portable cljc.
 
-  VENDORED, not a dependency: copied verbatim from `kotobase-protocols`'
-  `kotobase.protocols.json` (same namespace name, deliberately — see
-  `kotobase.protocols.http`'s docstring for why: ADR-2607172500's
+  VENDORED, not a dependency: copied from `kotobase-protocols`'
+  `kotobase.protocols.json`, and namespaced under `graphql` here for the
+  reason `kotobase.protocols.graphql.http`'s docstring gives: ADR-2607172500's
   dependency table lists only `kotoba-lang/graphql` and
   `kotoba-lang/kotobase-query` as this repo's dependencies, so a whole
   extra git dependency on `kotobase-protocols` isn't pulled in just for

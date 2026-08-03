@@ -114,8 +114,8 @@
             [graphql.model :as m]
             [graphql.ports :as p]
             [graphql.query :as gq]
-            [kotobase.protocols.http :as http]
-            [kotobase.protocols.json :as json]
+            [kotobase.protocols.graphql.http :as http]
+            [kotobase.protocols.graphql.json :as json]
             [kotobase.store :as st]))
 
 ;; ------------------------------------------------------------- resolvers

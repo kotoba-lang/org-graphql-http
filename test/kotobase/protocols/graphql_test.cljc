@@ -4,7 +4,7 @@
             [graphql.validate :as validate]
             [kotobase.local :as local]
             [kotobase.protocols.graphql :as gql]
-            [kotobase.protocols.json :as json]
+            [kotobase.protocols.graphql.json :as json]
             [kotobase.query.bridge :as bridge]
             [kotobase.store :as st]))
 
