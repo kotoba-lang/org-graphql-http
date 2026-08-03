@@ -1,18 +1,21 @@
-(ns kotobase.protocols.http
+(ns kotobase.protocols.graphql.http
   "Ring-shaped request/response plumbing for the graphql.kotobase.net
   surface.
 
   VENDORED, not a dependency: ADR-2607172500's dependency table lists only
   `kotoba-lang/graphql` and `kotoba-lang/kotobase-query` as this repo's
   dependencies (not `kotoba-lang/kotobase-protocols`) — this namespace is
-  copied verbatim from `kotobase-protocols`' `kotobase.protocols.http`
-  (same namespace name, deliberately, since it is the exact same tiny
-  zero-dependency ring-shape contract every `kotobase.protocols.*` HTTP
-  surface in this org shares) rather than pulled in as a git dependency on
-  a whole sibling protocols repo just for this one file. Keep in sync by
-  hand if `kotobase-protocols`' version changes in a way that matters
-  here. Same vendoring choice `org-opencypher-cypher`/`org-w3-sparql-protocol`
-  already made (ADR-2607172300).
+  copied from `kotobase-protocols`' `kotobase.protocols.http` rather than
+  pulled in as a git dependency on a whole sibling protocols repo just for
+  this one file. Same vendoring choice `org-opencypher-cypher` already made
+  (ADR-2607172300).
+
+  NAMESPACED UNDER `graphql` (ADR-2608039970 follow-up): it used to be
+  `kotobase.protocols.http`, the SAME name as the upstream copy and as the
+  copies in the other query-surface repos. One namespace, several different
+  files -- invisible while each repo builds alone, silently wrong the moment
+  a deploy shell puts two of them on one classpath. Vendoring is fine;
+  vendoring under the upstream's name is not.
 
   A request is plain data:
     {:method  :get|:put|:post|:head|:delete
