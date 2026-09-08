@@ -109,7 +109,7 @@
   :error ... :now ...}` on failure. Resolved DATA is never audited, only
   the caller's own raw query text (there are no `$variable` values to leak
   in v0.1, since those are rejected outright)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [graphql.execute :as exec]
             [graphql.model :as m]
             [graphql.ports :as p]
