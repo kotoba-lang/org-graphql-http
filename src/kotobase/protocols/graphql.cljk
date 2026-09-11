@@ -81,7 +81,7 @@
     `graphql.model` EDN map, typically built via `graphql.sdl/parse-schema`)
     and the field-resolver registry are supplied by the deploy shell / test
     fixtures via `ctx` -- see `resolver` below and
-    `test/kotobase/protocols/graphql_test.cljc` for a full worked example
+    `test/kotobase/protocols/graphql_test.cljk` for a full worked example
     (SDL schema + resolvers backed by two `kotobase.store` collections,
     including one cross-collection-join resolver).
 
